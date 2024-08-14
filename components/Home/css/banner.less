@@ -1,0 +1,85 @@
+@design-width: 1920;
+
+.banner-box {
+  background: #000;
+  img {
+    width: 100%;
+    height: 1080 ./ @design-width * 100vw;
+  }
+  .swiper-slide {
+    position: relative;
+  }
+  .img1 {
+    position: absolute;
+    width: 1370 ./ @design-width * 100vw;
+    height: 885 ./ @design-width * 100vw;
+    left: 50%;
+    bottom: 70 ./ @design-width * 100vw;
+    margin-left: -620 ./ @design-width * 100vw;
+    z-index: 3;
+  }
+  .img2 {
+    position: absolute;
+    width: 68 ./ @design-width * 100vw;
+    height: 214 ./ @design-width * 100vw;
+    left: 635 ./ @design-width * 100vw;
+    top: 170 ./ @design-width * 100vw;
+    animation: blink6 5s infinite;
+  }
+  .img3 {
+    position: absolute;
+    width: 112 ./ @design-width * 100vw;
+    height: 268 ./ @design-width * 100vw;
+    left: 1235 ./ @design-width * 100vw;
+    top: 170 ./ @design-width * 100vw;
+    animation: blink5 5s infinite;
+  }
+  .img4 {
+    position: absolute;
+    width: 78 ./ @design-width * 100vw;
+    height: 72 ./ @design-width * 100vw;
+    left: 370 ./ @design-width * 100vw;
+    top: 560 ./ @design-width * 100vw;
+    animation: blink6 5s infinite;
+  }
+  .img5 {
+    position: absolute;
+    width: 68 ./ @design-width * 100vw;
+    height: 68 ./ @design-width * 100vw;
+    left: 375 ./ @design-width * 100vw;
+    top: 565 ./ @design-width * 100vw;
+    animation: blink5 5s infinite;
+  }
+  .img6 {
+    position: absolute;
+    width: 144 ./ @design-width * 100vw;
+    height: 170 ./ @design-width * 100vw;
+    left: 1500 ./ @design-width * 100vw;
+    top: 500 ./ @design-width * 100vw;
+    z-index: 4;
+    animation: blink6 2s infinite;
+  }
+}
+@keyframes blink5 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink6 {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}

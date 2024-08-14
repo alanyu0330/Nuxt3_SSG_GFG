@@ -1,0 +1,50 @@
+@design-width: 1920;
+
+.seaShell {
+  position: absolute;
+  top: 470 ./ @design-width * 100vw;
+  width: 278 ./ @design-width * 100vw;
+  left: 220 ./ @design-width * 100vw;
+  height: 267 ./ @design-width * 100vw;
+  .seaShell-img1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 278 ./ @design-width * 100vw;
+    height: 267 ./ @design-width * 100vw;
+    animation: shrinkage 1s infinite;
+  }
+  .seaShell-img2 {
+    position: absolute;
+    top: 40 ./ @design-width * 100vw;
+    left: 35 ./ @design-width * 100vw;
+    width: 156 ./ @design-width * 100vw;
+    height: 146 ./ @design-width * 100vw;
+    animation: blink 1s infinite;
+  }
+}
+
+
+@keyframes shrinkage {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 0.9;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}

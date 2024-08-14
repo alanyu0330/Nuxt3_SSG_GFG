@@ -1,24 +1,19 @@
 interface baseState {
-  token: undefined;
-  name: string;
   loading: boolean;
+  lang: string;
 }
 
 export const useBaseStore = defineStore({
-  id: 'base',
+  id: "base",
   state: (): baseState => {
     return {
-      token: undefined,
-      name: 'jim',
       loading: false,
+      lang: "简体中文",
     };
   },
   actions: {
     setLoading(isLoading: boolean) {
       this.loading = isLoading;
-    },
-    async getGithubList() {
-      return await useAPI().getGithubList()
     },
   },
 });

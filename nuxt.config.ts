@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     "@element-plus/nuxt",
     "nuxt-font-loader",
@@ -30,4 +30,11 @@ export default defineNuxtConfig({
     ],
   },
   compatibilityDate: "2024-07-31",
+  plugins: [
+    // {
+    //   src: "~/plugins/vue3-seamless-scroll.ts",
+    //   ssr: false,
+    // },
+    "~/plugins/animatedCounter.client.ts",
+  ],
 } as any);

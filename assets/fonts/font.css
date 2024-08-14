@@ -1,0 +1,43 @@
+/* @font-face {
+    font-family:'fontTitle';
+    src:url('Arial-Narrow.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:'fontText';
+    src:url('Arial.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:'usFont';
+    src:url('AgencyFB-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family:'fontTitle';
+    src:url('semiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:'fontText';
+    src:url('semiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:'usFont';
+    src:url('semiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family:'usFont' !important;
+    src:url('semiBold.ttf') !important;
+    /* font-weight: normal !important; */
+    font-style: normal !important;
+}
