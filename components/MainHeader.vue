@@ -8,11 +8,7 @@
           v-for="(item, index) in navMenu"
           :key="index"
           @click="goAnchor(item.value)"
-          :class="{
-            active:
-              $route.path === '/pc/' + item.value ||
-              $route.meta.ppath === '/pc/' + item.value,
-          }"
+          :class="{ active: route.name === item.value }"
         >
           {{ guideTextFn(item.title) }}
         </div>
@@ -57,8 +53,13 @@
 
 <script setup>
 const homeStore = useHomeStore();
+import { useRoute, useRouter } from "#app";
+// 获取路由对象
+const route = useRoute();
+const router = useRouter();
 
 const lang = useBaseStore().lang;
+const languageData = homeStore.languageData;
 
 function langChange() {}
 const filterFn = (type, key) => {
@@ -74,7 +75,9 @@ function guideTextFn(val) {
     .find((el) => el.name === lang);
   return name[val];
 }
-function goAnchor() {}
+function goAnchor(target) {
+  router.push({ name: target });
+}
 function goHome() {}
 function langCk() {}
 
@@ -87,10 +90,6 @@ const navMenu = reactive([
     title: "game",
     value: "gameDisplay",
   },
-  // {
-  //   title: this.$i18n.t('aboutUstext1'),
-  //   value: 'aboutUs'
-  // },
   {
     title: "contact",
     value: "contactUs",

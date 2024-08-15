@@ -1,6 +1,4 @@
 <template>
-  <MainHeader />
-
   <div class="main">
     <div>
       <div class="banner-box">
@@ -397,7 +395,6 @@
           </a>
         </div>
       </div>
-      <MainFooter />
     </div>
   </div>
 </template>
@@ -406,8 +403,6 @@
 import { onMounted, reactive, nextTick } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
-import MainHeader from "~/components/MainHeader.vue";
-import MainFooter from "~/components/MainFooter.vue";
 import PcGameItem from "~/components/Home/PcGameItem.vue";
 // import vueSeamlessScroll from "vue3-seamless-scroll";
 
@@ -476,7 +471,11 @@ const imgFn = (game) => {
 };
 const viedoFn = () => "";
 const filterCertificationFn = () => "";
-const contactUsFn = () => "";
+const contactUsFn = (val, key, contactName) => {
+  const name = useHomeStore().parseVal.filter((el) => el.type === val);
+  const item = name.find((ele) => ele.name === key);
+  return item ? item[contactName] : "";
+};
 
 const loadObserve = async () => {
   await nextTick();

@@ -50,12 +50,17 @@ export const useHomeStore = defineStore("homeStore", {
     gamePresentation(): any[] {
       return this.parseVal.filter((el: any) => el.type === "gamePresentation");
     },
-    gameShowCaseList(): any {
+    gameShowCaseList(): any[] {
       return new Array(5).fill(0).map((_, index) => {
         return this.gamePresentation.filter(
           (el) => el.key2 === `tableData${index + 1}`,
         );
       });
+    },
+    gameList(): any[] {
+      return this.parseVal
+        .filter((el: any) => el.type === "config")
+        .filter((el) => el.isShow);
     },
   },
   actions: {

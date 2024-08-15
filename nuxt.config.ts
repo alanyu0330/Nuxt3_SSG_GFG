@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@unocss/nuxt",
     "@vueuse/nuxt",
     "@pinia/nuxt",
+    "@nuxt/image",
   ],
   runtimeConfig: {
     public: {
@@ -37,4 +38,7 @@ export default defineNuxtConfig({
     // },
     "~/plugins/animatedCounter.client.ts",
   ],
+  image: {
+    // Options
+  },
 } as any);
