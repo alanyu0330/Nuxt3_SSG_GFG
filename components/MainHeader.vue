@@ -60,6 +60,7 @@ const router = useRouter();
 
 const lang = useBaseStore().lang;
 const languageData = homeStore.languageData;
+const langShow = ref(false);
 
 function langChange() {}
 const filterFn = (type, key) => {
